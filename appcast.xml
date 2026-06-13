@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Evergreen</title>
+        <item>
+            <title>0.4.1</title>
+            <pubDate>Sat, 13 Jun 2026 07:19:40 +0100</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.4.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen-0.4.1.zip" length="8113065" type="application/octet-stream" sparkle:edSignature="7FXjkwQ3WLcs148QOh+WoMxe4Lo1QYXDRi/jHOKDJ0wGga0S1vXi9hRQ4MS+7AVyc7ZtKXV944Kjbey+nkI/Dg=="/>
+        </item>
+    </channel>
+</rss>
