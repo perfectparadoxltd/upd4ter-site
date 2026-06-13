@@ -1,807 +1,137 @@
-<!-- Copyright (c) 2026 Perfect Paradox Ltd (NI739317). All rights reserved. -->
-<!-- Evergreen — macOS utility landing page · Monolith Protocol design system -->
-<!--
-    ════════════════════════════════════════════════════════════════
-    TEMPLATE PLACEHOLDERS — replace all before publishing:
-      Evergreen            App name (e.g. "ClipStack")
-      Every app on your Mac. Up to date. One click.             One-line value prop
-      $19.99               Display price (e.g. "$19")
-      14          Trial length in days (e.g. "14")
-      <div style="padding:2rem;font-family:var(--font-mono);font-size:0.8125rem;line-height:2.1">
-<div style="color:var(--outline);text-transform:uppercase;letter-spacing:0.15em;font-size:0.6875rem;margin-bottom:0.75rem">11 updates available</div>
-<div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(71,71,71,0.25);padding:0.35rem 0"><span>Plex</span><span><span style="color:var(--outline)">1.111.2</span> <span style="color:var(--accent)">→ 1.112.0</span> <span style="border:1px solid var(--accent);color:var(--accent);padding:0.1rem 0.6rem;margin-left:0.75rem">UPDATE</span></span></div>
-<div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(71,71,71,0.25);padding:0.35rem 0"><span>BetterZip</span><span><span style="color:var(--outline)">5.4</span> <span style="color:var(--accent)">→ 5.4.2</span> <span style="border:1px solid var(--accent);color:var(--accent);padding:0.1rem 0.6rem;margin-left:0.75rem">UPDATE</span></span></div>
-<div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(71,71,71,0.25);padding:0.35rem 0"><span>Obsidian</span><span style="color:var(--accent)">⠿ verifying signature…</span></div>
-<div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(71,71,71,0.25);padding:0.35rem 0"><span>Steam</span><span style="color:var(--accent)">✓ updated to 4.2.1</span></div>
-<div style="display:flex;justify-content:space-between;padding:0.35rem 0"><span>Telegram</span><span style="color:var(--outline)">✓ up to date</span></div>
-</div>          Video/GIF embed markup (replace whole placeholder block)
-      https://github.com/perfectparadoxltd/evergreen/releases/latest        Direct .dmg/.zip download URL
-      pri_01kty6hjdkq9eve02drq2t632r   Paddle price ID (pri_...)
-      info@perfectparadox.co.uk       Support email address
-      #2E9159        Accent hex (e.g. "#7DF9AA") — only color in the page
-      macOS 14 Sonoma           Minimum macOS version (e.g. "macOS 13 Ventura")
-    ════════════════════════════════════════════════════════════════
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evergreen — Every app on your Mac. Up to date. One click.</title>
-    <meta name="description" content="Evergreen: Every app on your Mac. Up to date. One click.. One-time purchase, no subscription, no telemetry. Free 14-day trial for macOS 14 Sonoma and later.">
-    <meta property="og:title" content="Evergreen — Every app on your Mac. Up to date. One click.">
-    <meta property="og:description" content="One-time purchase, no subscription, no telemetry. Free 14-day trial.">
-    <meta name="author" content="Perfect Paradox Ltd (NI739317)">
-
-    <!-- ONLY external resource besides Paddle: Google Fonts (Monolith Protocol typography).
-         Remove these 3 lines for a fully offline page — system fallbacks are defined in the font stacks. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <style>
-        /* ════════════════════════════════════════════════════════
-           THE MONOLITH PROTOCOL — macOS Utility Landing Template
-           Absolute Zero Palette | Zero Rounded Corners | Cinematic Negativity
-           Source design system: BR3IN landing v1.1 (Perfect Paradox Ltd)
-        ════════════════════════════════════════════════════════ */
-
-        :root {
-            --surface: #131313;
-            --surface-low: #1c1b1b;
-            --surface-container: #20201F;
-            --surface-highest: #353535;
-            --surface-lowest: #0E0E0E;
-            --on-surface: #E5E2E1;
-            --primary: #FFFFFF;
-            --outline: #919191;
-            --outline-variant: #474747;
-            --accent: #2E9159;   /* per-app accent — the ONLY color on the page */
-            --font-display: 'Space Grotesk', -apple-system, 'Helvetica Neue', sans-serif;
-            --font-body: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
-            --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
-            --ease: cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border-radius: 0 !important; /* Monolith rule: zero rounded corners, no exceptions */
-        }
-
-        ::selection {
-            background: rgba(255, 255, 255, 0.15);
-            color: var(--primary);
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--surface);
-            color: var(--on-surface);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: var(--outline-variant); }
-
-        /* ── UTILITIES ── */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        .mono { font-family: var(--font-mono); }
-        .id-tag {
-            font-family: var(--font-mono);
-            font-size: 0.6875rem;
-            color: var(--outline);
-            opacity: 0.6;
-            letter-spacing: 0.05em;
-        }
-
-        /* ═══ NAVBAR ═══ */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: 1.25rem 2rem;
-            background: rgba(19, 19, 19, 0.85);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border-bottom: 1px solid rgba(71, 71, 71, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        nav .logo {
-            font-family: var(--font-display);
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        nav .logo span { color: var(--accent); }
-
-        nav .links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        nav .links a {
-            font-family: var(--font-mono);
-            font-size: 0.6875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--outline);
-            text-decoration: none;
-            transition: color 0.3s var(--ease);
-        }
-        nav .links a:hover { color: var(--primary); }
-        @media (max-width: 640px) {
-            nav .links a:not(.nav-buy) { display: none; }
-        }
-        nav .links a.nav-buy {
-            color: var(--surface);
-            background: var(--primary);
-            padding: 0.5rem 1rem;
-            transition: background 0.3s var(--ease);
-        }
-        nav .links a.nav-buy:hover { background: var(--accent); }
-
-        /* ═══ HERO ═══ */
-        .hero {
-            padding-top: 180px;
-            padding-bottom: 80px;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            opacity: 0.03;
-            background: linear-gradient(45deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 80px 80px;
-            pointer-events: none;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            font-family: var(--font-mono);
-            font-size: 0.6875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 2rem;
-            animation: fadeInUp 0.8s var(--ease);
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 9vw, 5.5rem);
-            font-weight: 700;
-            line-height: 1.05;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            animation: fadeInUp 0.8s var(--ease) 0.1s both;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 3vw, 1.25rem);
-            color: var(--outline);
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: fadeInUp 0.8s var(--ease) 0.2s both;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s var(--ease) 0.3s both;
-        }
-        @media (max-width: 640px) {
-            .hero-cta { flex-direction: column; align-items: stretch; }
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            text-decoration: none;
-            cursor: pointer;
-            border: 1px solid var(--outline-variant);
-            transition: all 0.3s var(--ease);
-            display: inline-block;
-            background: transparent;
-            color: var(--on-surface);
-        }
-        .btn-primary {
-            background: var(--primary);
-            color: var(--surface);
-            border-color: var(--primary);
-        }
-        .btn-primary:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            transform: scale(1.04);
-        }
-        .btn-secondary:hover { background: var(--surface-container); }
-
-        .hero-meta {
-            margin-top: 1.5rem;
-            font-family: var(--font-mono);
-            font-size: 0.6875rem;
-            color: var(--outline);
-            animation: fadeInUp 0.8s var(--ease) 0.4s both;
-        }
-
-        /* ═══ TRUST BADGES ═══ */
-        .trust {
-            background: var(--surface-low);
-            padding: 1.5rem 0;
-            border-top: 1px solid rgba(71, 71, 71, 0.15);
-            border-bottom: 1px solid rgba(71, 71, 71, 0.15);
-        }
-        .trust-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.75rem 2rem;
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--outline);
-        }
-        .trust-row span::before {
-            content: '✓ ';
-            color: var(--accent);
-        }
-
-        /* ═══ DEMO ═══ */
-        .demo { padding: 120px 0 0; }
-        .demo-frame {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--surface-lowest);
-            border: 1px solid var(--outline-variant);
-        }
-        .demo-header {
-            padding: 0.75rem 1rem;
-            border-bottom: 1px solid var(--outline-variant);
-            font-family: var(--font-mono);
-            font-size: 0.6875rem;
-            color: var(--outline);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .demo-dot {
-            width: 10px;
-            height: 10px;
-            border: 1px solid var(--outline);
-            opacity: 0.5;
-        }
-        .demo-body {
-            aspect-ratio: 16 / 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .demo-body > * { width: 100%; height: 100%; object-fit: cover; }
-        .demo-placeholder {
-            font-family: var(--font-mono);
-            font-size: 0.8125rem;
-            color: var(--outline);
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* ═══ FEATURES ═══ */
-        .features { padding: 120px 0; }
-        .section-title {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 3.5rem;
-            text-align: center;
-            color: var(--primary);
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1px;
-        }
-        @media (max-width: 700px) {
-            .features-grid { grid-template-columns: 1fr; }
-        }
-        .feature-card {
-            background: var(--surface-low);
-            padding: 2.5rem 2rem;
-            position: relative;
-            border: 1px solid rgba(71, 71, 71, 0.1);
-            transition: all 0.4s var(--ease);
-        }
-        .feature-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(71, 71, 71, 0.3);
-        }
-        .feature-tag {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-family: var(--font-mono);
-            font-size: 0.625rem;
-            color: var(--outline);
-            opacity: 0.4;
-        }
-        .feature-icon {
-            font-family: var(--font-mono);
-            font-size: 1.25rem;
-            color: var(--accent);
-            margin-bottom: 1.25rem;
-        }
-        .feature-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--primary);
-        }
-        .feature-card p {
-            font-size: 0.95rem;
-            color: var(--outline);
-            line-height: 1.7;
-        }
-
-        /* ═══ PRICING ═══ */
-        .pricing {
-            background: var(--surface-low);
-            padding: 120px 0;
-            border-top: 1px solid rgba(71, 71, 71, 0.15);
-        }
-        .price-card {
-            max-width: 460px;
-            margin: 0 auto;
-            background: var(--surface-container);
-            padding: 3rem 2.5rem;
-            position: relative;
-            box-shadow: inset 0 0 0 2px var(--accent);
-            text-align: center;
-        }
-        .price-badge {
-            position: absolute;
-            top: 1.25rem;
-            right: 1.25rem;
-            font-family: var(--font-mono);
-            font-size: 0.625rem;
-            background: var(--accent);
-            color: var(--surface-lowest);
-            padding: 0.4rem 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .price-name {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        .price-amount {
-            font-family: var(--font-display);
-            font-size: 4rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-        .price-period {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--outline);
-            margin-bottom: 2rem;
-        }
-        .price-features {
-            list-style: none;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid rgba(71, 71, 71, 0.3);
-            text-align: left;
-        }
-        .price-features li {
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-            color: var(--on-surface);
-        }
-        .price-features li::before {
-            content: '✓ ';
-            color: var(--accent);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-        .price-note {
-            margin-top: 1.5rem;
-            font-size: 0.8125rem;
-            color: var(--outline);
-            line-height: 1.6;
-        }
-
-        /* ═══ FAQ ═══ */
-        .faq { padding: 120px 0; }
-        .faq-container {
-            max-width: 760px;
-            margin: 0 auto;
-        }
-        .faq-item {
-            border-bottom: 1px solid rgba(71, 71, 71, 0.15);
-            padding: 1.75rem 0;
-        }
-        .faq-question {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            transition: color 0.3s var(--ease);
-            color: var(--on-surface);
-        }
-        .faq-question:hover { color: var(--primary); }
-        .faq-toggle {
-            font-size: 1.5rem;
-            color: var(--accent);
-            transition: transform 0.3s var(--ease);
-            flex-shrink: 0;
-        }
-        .faq-item.open .faq-toggle { transform: rotate(45deg); }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s var(--ease), padding 0.4s var(--ease);
-            color: var(--outline);
-            line-height: 1.8;
-        }
-        .faq-item.open .faq-answer {
-            max-height: 500px;
-            padding-top: 1rem;
-        }
-
-        /* ═══ FINAL CTA ═══ */
-        .final-cta {
-            padding: 100px 0;
-            text-align: center;
-            background: var(--surface-low);
-            border-top: 1px solid rgba(71, 71, 71, 0.15);
-        }
-        .final-cta h2 {
-            font-family: var(--font-display);
-            font-size: clamp(1.75rem, 4vw, 2.75rem);
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        .final-cta p {
-            font-size: 1.05rem;
-            color: var(--outline);
-            margin-bottom: 2.5rem;
-            max-width: 560px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ═══ FOOTER ═══ */
-        footer {
-            background: var(--surface);
-            padding: 3rem 0 2rem;
-            border-top: 1px solid rgba(71, 71, 71, 0.15);
-        }
-        .footer-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--outline);
-        }
-        @media (max-width: 640px) {
-            .footer-inner { flex-direction: column; text-align: center; }
-        }
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .footer-links a {
-            color: var(--outline);
-            text-decoration: none;
-            transition: color 0.3s var(--ease);
-        }
-        .footer-links a:hover { color: var(--primary); }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evergreen — Every app on your Mac, kept up to date in one click</title>
+<meta name="description" content="Evergreen keeps every app on your Mac up to date — checked, fetched and ready in one click. One-time purchase, on-device, zero telemetry. macOS 14+.">
+<meta property="og:title" content="Evergreen — Every app on your Mac, kept up to date">
+<meta property="og:description" content="App updates in one click. One-time $19.99, on-device, zero telemetry.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{ --bg:#0a0a0b; --ink:#f4f1ea; --crimson:#34C759; --crimson2:#5BE07E; --muted:#8c8a86; --line:rgba(244,241,234,.14); }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Archivo',sans-serif;overflow-x:hidden}
+.bgvideo{position:fixed;inset:0;width:100vw;height:100vh;object-fit:cover;z-index:0}
+.bgtint{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 90% at 70% 15%, rgba(52,199,89,.18), transparent 60%), rgba(10,10,11,.42)}
+.scanfixed{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.4;background:repeating-linear-gradient(0deg, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.22) 2px 3px)}
+.page{position:relative;z-index:2}
+.rail{position:fixed;top:0;bottom:0;width:40px;display:flex;align-items:center;justify-content:center;z-index:40;pointer-events:none}
+.rail.l{left:0}.rail.r{right:0}
+.rail span{writing-mode:vertical-rl;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--ink);opacity:.7}
+.rail.l span{transform:rotate(180deg)}
+nav{position:fixed;top:0;left:0;right:0;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 56px;z-index:50;mix-blend-mode:difference}
+nav .brand{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.3em;text-transform:uppercase}
+nav .links{display:flex;gap:28px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+nav a{color:var(--ink);text-decoration:none;opacity:.85}
+.hero{position:relative;height:100vh;min-height:680px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 64px}
+.hero .veil{position:absolute;inset:0;z-index:0;background:linear-gradient(180deg, transparent 35%, rgba(10,10,11,.82) 100%)}
+.hero .inner{position:relative;z-index:2;max-width:1100px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.4em;text-transform:uppercase;color:var(--crimson2);margin-bottom:18px}
+.hero h1{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(80px,18vw,260px);line-height:.82;letter-spacing:-.01em;text-shadow:0 6px 60px rgba(0,0,0,.5)}
+.hero h1 .stroke{-webkit-text-stroke:2px var(--ink);color:transparent}
+.hero .sub{margin-top:22px;max-width:560px;font-size:19px;line-height:1.5;color:#e7e3db}
+.cta-row{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;align-items:center}
+.btn{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.18em;font-size:13px;padding:16px 30px;border:1px solid var(--ink);color:var(--ink);background:transparent;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:.18s;cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.primary{background:var(--crimson);border-color:var(--crimson);color:#fff}
+.btn.primary:hover{background:var(--crimson2);border-color:var(--crimson2)}
+.price-tag{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.2em;color:#cfcbc3}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:14px 0;background:rgba(13,13,14,.92)}
+.marquee div{display:inline-block;animation:scroll 26s linear infinite;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:22px;letter-spacing:.05em;color:var(--muted)}
+.marquee b{color:var(--crimson2)}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.feat{padding:120px 56px;background:rgba(10,10,11,.9)}
+.feat-inner{max-width:1300px;margin:0 auto}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--crimson2);margin-bottom:50px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cell{background:rgba(10,10,11,.75);padding:48px 40px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
+.cell .n{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.2em}
+.cell h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:34px;line-height:.95;margin:18px 0 14px}
+.cell p{color:#cbc7bf;font-size:16px;line-height:1.55}
+.price{padding:140px 56px;text-align:center;background:rgba(10,10,11,.78)}
+.price .big{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(60px,11vw,150px);line-height:.85}
+.price .amt{color:var(--crimson2)}
+.price .terms{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin:24px 0 36px}
+footer{padding:50px 56px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:rgba(10,10,11,.95)}
+footer a{color:var(--muted);text-decoration:none}
+@media(max-width:760px){.grid{grid-template-columns:1fr}nav,.hero,.feat,.price,footer{padding-left:24px;padding-right:24px}.rail{display:none}}
+</style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <a href="#home" class="logo">Evergreen<span>_</span></a>
-        <div class="links">
-            <a href="#demo">Demo</a>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-            <a href="#pricing" class="nav-buy">Buy — $19.99</a>
-        </div>
-    </nav>
+<video class="bgvideo" autoplay muted loop playsinline><source src="hero.mp4" type="video/mp4"></video>
+<div class="bgtint"></div>
+<div class="scanfixed"></div>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-content container">
-            <div class="hero-tag">/// macOS 14 Sonoma+ · Universal binary · Notarized</div>
-            <h1>Evergreen</h1>
-            <p class="hero-subtitle">Every app on your Mac. Up to date. One click.</p>
-            <div class="hero-cta">
-                <a href="https://github.com/perfectparadoxltd/evergreen/releases/latest" class="btn btn-secondary">Download Free Trial</a>
-                <!-- Paddle overlay checkout — see commented Paddle block at the bottom of this file -->
-                <button class="btn btn-primary" id="buy-btn" onclick="openCheckout()">Buy — $19.99</button>
-            </div>
-            <div class="hero-meta">14-day free trial · No account required · One-time purchase</div>
-        </div>
-    </section>
+<div class="rail l"><span>Perfect Paradox Ltd · NI739317</span></div>
+<div class="rail r"><span>Evergreen · v0.4.1 · macOS 14+</span></div>
 
-    <!-- TRUST BADGES -->
-    <section class="trust">
-        <div class="container">
-            <div class="trust-row">
-                <span>One-time purchase</span>
-                <span>No subscription</span>
-                <span>No telemetry</span>
-                <span>Made in UK</span>
-            </div>
-        </div>
-    </section>
+<nav>
+  <div class="brand">PERFECT&nbsp;PARADOX</div>
+  <div class="links"><a href="#features">Features</a><a href="#buy">Buy</a><a href="/legal/privacy.html">Privacy</a></div>
+</nav>
 
-    <!-- DEMO -->
-    <section class="demo" id="demo">
-        <div class="container">
-            <div class="demo-frame">
-                <div class="demo-header">
-                    <div class="demo-dot"></div>
-                    <div class="demo-dot"></div>
-                    <div class="demo-dot"></div>
-                    <span>Evergreen.app — demo</span>
-                </div>
-                <div class="demo-body">
-                    <!-- Replace this whole block with your video/GIF embed:
-                         <video autoplay loop muted playsinline src="demo.mp4"></video>
-                         or <img src="demo.gif" alt="Evergreen demo"> -->
-                    <div style="padding:2rem;font-family:var(--font-mono);font-size:0.8125rem;line-height:2.1">
-<div style="color:var(--outline);text-transform:uppercase;letter-spacing:0.15em;font-size:0.6875rem;margin-bottom:0.75rem">11 updates available</div>
-<div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(71,71,71,0.25);padding:0.35rem 0"><span>Plex</span><span><span style="color:var(--outline)">1.111.2</span> <span style="color:var(--accent)">→ 1.112.0</span> <span style="border:1px solid var(--accent);color:var(--accent);padding:0.1rem 0.6rem;margin-left:0.75rem">UPDATE</span></span></div>
-<div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(71,71,71,0.25);padding:0.35rem 0"><span>BetterZip</span><span><span style="color:var(--outline)">5.4</span> <span style="color:var(--accent)">→ 5.4.2</span> <span style="border:1px solid var(--accent);color:var(--accent);padding:0.1rem 0.6rem;margin-left:0.75rem">UPDATE</span></span></div>
-<div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(71,71,71,0.25);padding:0.35rem 0"><span>Obsidian</span><span style="color:var(--accent)">⠿ verifying signature…</span></div>
-<div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(71,71,71,0.25);padding:0.35rem 0"><span>Steam</span><span style="color:var(--accent)">✓ updated to 4.2.1</span></div>
-<div style="display:flex;justify-content:space-between;padding:0.35rem 0"><span>Telegram</span><span style="color:var(--outline)">✓ up to date</span></div>
+<div class="page">
+<section class="hero">
+  <div class="veil"></div>
+  <div class="inner">
+    <div class="kicker">App updates · One click · On-device</div>
+    <h1>EVER<span class="stroke">GREEN</span></h1>
+    <p class="sub">Every app on your Mac, kept up to date — checked, fetched and ready in one click. No subscriptions, no telemetry, no nagging.</p>
+    <div class="cta-row">
+      <a href="https://github.com/perfectparadoxltd/evergreen/releases/latest" class="btn primary">Download trial →</a>
+      <button class="btn" onclick="openCheckout()">Buy · $19.99</button>
+      <span class="price-tag">ONE-TIME · 14-DAY TRIAL</span>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div>ONE CLICK UPDATES&nbsp;&nbsp;·&nbsp;&nbsp;<b>ZERO TELEMETRY</b>&nbsp;&nbsp;·&nbsp;&nbsp;CURATED DATABASE&nbsp;&nbsp;·&nbsp;&nbsp;<b>ONE-TIME PURCHASE</b>&nbsp;&nbsp;·&nbsp;&nbsp;ONE CLICK UPDATES&nbsp;&nbsp;·&nbsp;&nbsp;<b>ZERO TELEMETRY</b>&nbsp;&nbsp;·&nbsp;&nbsp;CURATED DATABASE&nbsp;&nbsp;·&nbsp;&nbsp;<b>ONE-TIME PURCHASE</b>&nbsp;&nbsp;·&nbsp;&nbsp;</div></div>
+
+<section class="feat" id="features">
+  <div class="feat-inner">
+    <div class="sec-label">// What it does</div>
+    <div class="grid">
+      <div class="cell"><div class="n">01</div><div><h3>Every app,<br>one click</h3><p>Scans what's installed and finds the latest version of each — from a curated database, not guesswork.</p></div></div>
+      <div class="cell"><div class="n">02</div><div><h3>Lives in your<br>menu bar</h3><p>Checks quietly in the background and tells you only when something's actually out of date.</p></div></div>
+      <div class="cell"><div class="n">03</div><div><h3>Download-<br>only mode</h3><p>Don't want auto-install? Evergreen just fetches the updates and lets you decide what to run.</p></div></div>
+      <div class="cell"><div class="n">04</div><div><h3>On your Mac,<br>not the cloud</h3><p>No account, no telemetry on your apps. One-time purchase, free updates within the major version.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="buy">
+  <div class="sec-label" style="text-align:center">// One price. Forever.</div>
+  <div class="big">EVERGREEN <span class="amt">$19.99</span></div>
+  <div class="terms">One-time purchase · 14-day trial · Works on every Mac you own</div>
+  <button class="btn primary" onclick="openCheckout()">Buy Evergreen →</button>
+</section>
+
+<footer>
+  <div>© 2026 Perfect Paradox Ltd · NI739317</div>
+  <div><a href="/legal/privacy.html">Privacy</a> · <a href="/legal/terms.html">Terms</a> · <a href="/legal/refund.html">Refund</a> · <a href="/legal/eula.html">EULA</a> · <a href="mailto:info@perfectparadox.co.uk">info@perfectparadox.co.uk</a></div>
+</footer>
 </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- FEATURES -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">What it does</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-tag">F.01</div>
-                    <div class="feature-icon">[↓]</div>
-                    <h3>One-click updates, verified</h3>
-                    <p>Evergreen downloads the update, checks the code signature and verifies the developer's Team ID matches the app you already trust — before a single byte is replaced. If anything fails, automatic rollback.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-tag">F.02</div>
-                    <div class="feature-icon">[◎]</div>
-                    <h3>Sees what the App Store can't</h3>
-                    <p>Most of your apps came from the web, not the App Store — and nothing keeps them updated. Evergreen tracks them via Homebrew's catalog, Sparkle feeds and the open Evergreen database.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-tag">F.03</div>
-                    <div class="feature-icon">[▴]</div>
-                    <h3>Lives in your menu bar</h3>
-                    <p>Checks quietly in the background on your schedule. One leaf icon, a badge when something's new, a notification only when it matters. Close the window — Evergreen keeps watch.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-tag">F.04</div>
-                    <div class="feature-icon">[⇣]</div>
-                    <h3>Download Only mode</h3>
-                    <p>Don't want any app touching your /Applications? Evergreen can download and signature-verify the update, then drop it in your Downloads folder. You install it yourself.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-tag">F.05</div>
-                    <div class="feature-icon">[¶]</div>
-                    <h3>Release notes built in</h3>
-                    <p>See what changed before you update — release notes pulled straight from the developer's feed, side by side with the version you're on.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-tag">F.06</div>
-                    <div class="feature-icon">[x]</div>
-                    <h3>Private by design</h3>
-                    <p>Your app inventory never leaves your Mac. No accounts, no analytics, no phoning home. The update database is public — you can read every line of it on GitHub.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-title">One price. Yours forever.</h2>
-            <div class="price-card">
-                <div class="price-badge">Pay once</div>
-                <div class="price-name">Evergreen License</div>
-                <div class="price-amount">$19.99</div>
-                <div class="price-period">launch price — $24.99 after · one-time · no subscription · VAT handled by Paddle</div>
-                <ul class="price-features">
-                    <li>Full app, all features unlocked</li>
-                    <li>Use on all Macs you personally own</li>
-                    <li>Free updates within this major version</li>
-                    <li>14-day free trial before you decide</li>
-                    <li>14-day money-back guarantee</li>
-                    <li>Email support: info@perfectparadox.co.uk</li>
-                </ul>
-                <button class="btn btn-primary" onclick="openCheckout()">Buy — $19.99</button>
-                <p class="price-note">Major upgrades (e.g. v1 → v2) may be a paid, discounted upgrade — never forced. Your version keeps working forever.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How does the free trial work?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        Download the app and use it fully featured for 14 days — no account, no credit card, no email required. When the trial ends, the app politely asks for a license. Buy one, paste it in, done.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How many Macs can I use it on?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        Your license covers all Macs you personally own and use — desktop, laptop, the old one in the drawer. It's a per-person license, not per-device. For team or volume licensing, email info@perfectparadox.co.uk.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What's your refund policy?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        14-day money-back guarantee, no questions asked. Purchases are processed by Paddle (our merchant of record) — request a refund via the link in your receipt email or by writing to info@perfectparadox.co.uk and we'll sort it out.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Are updates included?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        Yes — all updates within the major version you bought are free (bug fixes, improvements, new features). If we ever ship a major new version with significant new functionality, existing customers get a discounted upgrade and the version you own keeps working forever. No forced upgrades, ever.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What data does the app collect?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        None. No analytics, no telemetry, no crash reporters phoning home, no accounts. The only network request the app makes is validating your license key at activation. Payment data is handled entirely by Paddle — we never see your card details.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Try it free for 14 days.</h2>
-            <p>Built by an independent developer. No VC, no dark patterns, no subscription treadmill — just a tool that earns its price.</p>
-            <a href="https://github.com/perfectparadoxltd/evergreen/releases/latest" class="btn btn-primary">Download Free Trial</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-inner">
-            <div>© 2026 Perfect Paradox Ltd (NI739317). All rights reserved.</div>
-            <div class="footer-links">
-                <a href="/legal/privacy.html">Privacy</a>
-                <a href="/legal/terms.html">Terms</a>
-                <a href="/legal/refund.html">Refund Policy</a>
-                <a href="/legal/eula.html">EULA</a>
-                <a href="mailto:info@perfectparadox.co.uk">info@perfectparadox.co.uk</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ════════════════════════════════════════════════════════
-         PADDLE OVERLAY CHECKOUT
-         TODO before launch:
-           1. Create the product + price in Paddle dashboard
-           2. Replace pri_01kty6hjdkq9eve02drq2t632r with the real price ID (pri_...)
-           3. Uncomment the two blocks below
-           4. For sandbox testing, add: Paddle.Environment.set('sandbox');
-              before Paddle.Initialize, and use a sandbox client token
-         ════════════════════════════════════════════════════════ -->
-    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-    <script>
-        Paddle.Initialize({
-            token: 'live_0c45d27a78741d1285949859fcc' // TODO: client-side token from Paddle dashboard
-        });
-    </script>
-
-
-    <script>
-        // Paddle overlay checkout trigger.
-        // While Paddle is not wired up, falls back to a mailto so the button never dead-ends.
-        function openCheckout() {
-            if (window.Paddle) {
-                Paddle.Checkout.open({
-                    items: [{ priceId: 'pri_01kty6hjdkq9eve02drq2t632r', quantity: 1 }] // TODO: real price ID
-                });
-            } else {
-                window.location.href = 'mailto:info@perfectparadox.co.uk?subject=Buy%20Evergreen';
-            }
-        }
-
-        // FAQ accordion (vanilla, no dependencies)
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                const item = q.parentElement;
-                const wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-                if (!wasOpen) item.classList.add('open');
-            });
-        });
-    </script>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+  const PADDLE_TOKEN = 'live_0c45d27a78741d1285949859fcc';
+  const PADDLE_PRICE = 'pri_01kty6hjdkq9eve02drq2t632r';
+  const PADDLE_READY = PADDLE_TOKEN && !PADDLE_TOKEN.includes('PADDLE_CLIENT_TOKEN');
+  if (PADDLE_READY && window.Paddle) {
+    Paddle.Initialize({ token: PADDLE_TOKEN });
+  }
+  function openCheckout() {
+    if (PADDLE_READY && window.Paddle) {
+      Paddle.Checkout.open({ items: [{ priceId: PADDLE_PRICE, quantity: 1 }] });
+    } else {
+      window.location.href = 'mailto:info@perfectparadox.co.uk?subject=Buy%20Evergreen';
+    }
+  }
+</script>
 </body>
 </html>
