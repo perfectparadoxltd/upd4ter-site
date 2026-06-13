@@ -8,6 +8,8 @@
 <meta property="og:title" content="Evergreen — Every app on your Mac, kept up to date">
 <meta property="og:description" content="App updates in one click. One-time $19.99, on-device, zero telemetry.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://evergreen.perfectparadox.co.uk/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -69,6 +71,47 @@ details.faq-item summary::-webkit-details-marker{display:none}
 details.faq-item summary::after{content:'+';color:var(--crimson2);font-family:'JetBrains Mono',monospace;font-size:26px;flex-shrink:0}
 details.faq-item[open] summary::after{content:'\2212'}
 details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-height:1.6;max-width:680px}
+
+/* sticky buy bar */
+#stickybuy{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 56px;background:rgba(10,10,11,.92);border-top:1px solid var(--line);backdrop-filter:blur(8px);transform:translateY(110%);transition:transform .3s ease}
+#stickybuy.show{transform:translateY(0)}
+#stickybuy .sb-l{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+#stickybuy .sb-l b{color:var(--crimson2)}
+@media(max-width:760px){#stickybuy{padding:12px 18px}#stickybuy .sb-l span{display:none}}
+/* how it works */
+.how{padding:120px 56px;background:rgba(10,10,11,.82)}
+.how-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:rgba(10,10,11,.7);padding:44px 36px}
+.step .sn{font-family:'Anton',sans-serif;font-size:64px;line-height:1;color:var(--crimson2)}
+.step h4{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:26px;margin:14px 0 10px}
+.step p{color:#cbc7bf;font-size:15px;line-height:1.55}
+/* compare */
+.cmp{padding:120px 56px;background:rgba(10,10,11,.9)}
+.cmp-wrap{max-width:920px;margin:0 auto}
+.cmp table{width:100%;border-collapse:collapse;font-size:15px}
+.cmp th,.cmp td{padding:16px 14px;border-bottom:1px solid var(--line);text-align:left}
+.cmp th{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cmp th.us,.cmp td.us{background:rgba(52,199,89,.06)}
+.cmp td.us{color:var(--crimson2);font-weight:600}
+.cmp .yes{color:var(--crimson2)}.cmp .no{color:#6e6c69}
+.cmp td:first-child{color:#cbc7bf}
+@media(max-width:760px){.how-wrap{grid-template-columns:1fr}.cmp{padding:80px 18px}}
+/* mini-demos in feature cells */
+.demo{height:96px;margin-bottom:22px;border:1px solid var(--line);border-radius:8px;background:#0c0c0d;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.d-row{display:flex;align-items:center;gap:10px;width:84%}
+.d-ico{width:26px;height:26px;border-radius:6px;flex-shrink:0}
+.d-name{font-size:13px;color:#e9e9ea;flex:1}
+.d-bar{height:5px;border-radius:3px;background:rgba(255,255,255,.12);flex:1;overflow:hidden}
+.d-bar i{display:block;height:100%;width:0;background:var(--crimson2);animation:fill 3s ease-in-out infinite}
+@keyframes fill{0%{width:0}55%{width:100%}100%{width:100%}}
+.d-chk{color:var(--crimson2);font-size:16px;opacity:0;animation:pop 3s ease-in-out infinite}
+@keyframes pop{0%,55%{opacity:0;transform:scale(.6)}65%,100%{opacity:1;transform:scale(1)}}
+.d-menubar{position:absolute;top:0;left:0;right:0;height:22px;background:#1c1c1e;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:flex-end;padding:0 10px;gap:8px}
+.d-badge{font-family:'JetBrains Mono',monospace;font-size:10px;color:#06310f;background:var(--crimson2);border-radius:8px;padding:1px 6px;animation:blink 2.5s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:.4}50%{opacity:1}}
+.d-shield{font-size:30px;animation:glow 3s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+.d-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-left:10px}
 </style>
 </head>
 <body>
@@ -85,6 +128,7 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
   <div class="links"><a href="#features">Features</a><a href="#buy">Buy</a><a href="/legal/privacy.html">Privacy</a></div>
 </nav>
 
+<div id="stickybuy"><div class="sb-l"><b>Evergreen</b> <span>&mdash; every app up to date, one click</span></div><button class="btn primary" onclick="openCheckout()" style="padding:12px 26px">Buy &middot; $19.99</button></div>
 <div class="page">
 <section class="hero">
   <div class="veil"></div>
@@ -103,6 +147,11 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
 <div class="marquee"><div>ONE CLICK UPDATES&nbsp;&nbsp;·&nbsp;&nbsp;<b>ZERO TELEMETRY</b>&nbsp;&nbsp;·&nbsp;&nbsp;CURATED DATABASE&nbsp;&nbsp;·&nbsp;&nbsp;<b>ONE-TIME PURCHASE</b>&nbsp;&nbsp;·&nbsp;&nbsp;ONE CLICK UPDATES&nbsp;&nbsp;·&nbsp;&nbsp;<b>ZERO TELEMETRY</b>&nbsp;&nbsp;·&nbsp;&nbsp;CURATED DATABASE&nbsp;&nbsp;·&nbsp;&nbsp;<b>ONE-TIME PURCHASE</b>&nbsp;&nbsp;·&nbsp;&nbsp;</div></div>
 
 
+<section class="how"><div style="max-width:1100px;margin:0 auto"><div class="sec-label">// How it works</div></div><div class="how-wrap">
+<div class="step"><div class="sn">1</div><h4>Install &amp;<br>open</h4><p>Drop Evergreen in your Applications folder and launch it. No account, no setup.</p></div>
+<div class="step"><div class="sn">2</div><h4>It scans<br>everything</h4><p>Evergreen reads your installed apps and checks each against the latest released version.</p></div>
+<div class="step"><div class="sn">3</div><h4>One click,<br>all current</h4><p>Review what's outdated and hit Update — or let it run on its own. Done.</p></div>
+</div></section>
 <section class="appshow" style="padding:120px 56px;background:rgba(10,10,11,.82)">
   <div style="max-width:760px;margin:0 auto">
     <div class="sec-label">// See it work</div>
@@ -147,18 +196,22 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
   </div>
 </section>
 
-<section class="feat" id="features">
-  <div class="feat-inner">
-    <div class="sec-label">// What it does</div>
-    <div class="grid">
-      <div class="cell"><div class="n">01</div><div><h3>Every app,<br>one click</h3><p>Scans what's installed and finds the latest version of each — from a curated database, not guesswork.</p></div></div>
-      <div class="cell"><div class="n">02</div><div><h3>Lives in your<br>menu bar</h3><p>Checks quietly in the background and tells you only when something's actually out of date.</p></div></div>
-      <div class="cell"><div class="n">03</div><div><h3>Download-<br>only mode</h3><p>Don't want auto-install? Evergreen just fetches the updates and lets you decide what to run.</p></div></div>
-      <div class="cell"><div class="n">04</div><div><h3>On your Mac,<br>not the cloud</h3><p>No account, no telemetry on your apps. One-time purchase, free updates within the major version.</p></div></div>
-    </div>
-  </div>
-</section>
+<section class="feat" id="features"><div class="feat-inner"><div class="sec-label">// What it does</div><div class="grid">
+<div class="cell"><div class="demo"><div class="d-row"><span class="d-ico" style="background:linear-gradient(135deg,#F24E1E,#FF7262)"></span><span class="d-name">Figma</span><span class="d-bar"><i></i></span><span class="d-chk">&#10003;</span></div></div><div class="n">01</div><div><h3>Every app,<br>one click</h3><p>Scans what's installed and finds the latest version of each &mdash; from a curated database, not guesswork.</p></div></div>
+<div class="cell"><div class="demo"><div class="d-menubar"><span class="d-shield" style="font-size:14px">&#9651;</span><span class="d-badge">3</span></div><div class="d-tag">3 updates available</div></div><div class="n">02</div><div><h3>Lives in your<br>menu bar</h3><p>Checks quietly in the background and tells you only when something's actually out of date.</p></div></div>
+<div class="cell"><div class="demo"><div class="d-row"><span class="d-tag" style="margin:0">Downloading</span><span class="d-bar"><i></i></span></div></div><div class="n">03</div><div><h3>Download-<br>only mode</h3><p>Don't want auto-install? Evergreen just fetches the updates and lets you decide what to run.</p></div></div>
+<div class="cell"><div class="demo"><span class="d-shield">&#128274;</span><span class="d-tag">0 trackers &middot; on-device</span></div><div class="n">04</div><div><h3>On your Mac,<br>not the cloud</h3><p>No account, no telemetry on your apps. One-time purchase, free updates within the major version.</p></div></div>
+</div></div></section>
 
+<section class="cmp"><div class="cmp-wrap"><div class="sec-label">// How it compares</div>
+<table><thead><tr><th></th><th class="us">Evergreen</th><th>Mac App Store</th><th>MacUpdater</th></tr></thead><tbody>
+<tr><td>Updates apps from outside the App Store</td><td class="us yes">&#10003;</td><td><span class="no">&#10007;</span></td><td class="yes">&#10003;</td></tr>
+<tr><td>One-click update all</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><td>Verifies code signature before install</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td><span class="no">~</span></td></tr>
+<tr><td>One-time purchase (no subscription)</td><td class="us yes">&#10003;</td><td class="yes">free</td><td><span class="no">subscription</span></td></tr>
+<tr><td>On-device, zero telemetry</td><td class="us yes">&#10003;</td><td><span class="no">~</span></td><td><span class="no">~</span></td></tr>
+<tr><td>Actively maintained in 2026</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td><span class="no">discontinued</span></td></tr>
+</tbody></table></div></section>
 <section class="price" id="buy">
   <div class="sec-label" style="text-align:center">// One price. Forever.</div>
   <div class="big">EVERGREEN <span class="amt">$19.99</span></div>
@@ -200,5 +253,6 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
     }
   }
 </script>
+<script>(function(){var b=document.getElementById('stickybuy');addEventListener('scroll',function(){if(scrollY>700)b.classList.add('show');else b.classList.remove('show')})})();</script>
 </body>
 </html>
