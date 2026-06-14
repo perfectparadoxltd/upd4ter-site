@@ -3,6 +3,18 @@
     <channel>
         <title>Evergreen</title>
         <item>
+            <title>0.5.0</title>
+            <pubDate>Sun, 14 Jun 2026 01:33:58 +0100</pubDate>
+            <sparkle:version>2</sparkle:version>
+            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen-0.5.0.zip" length="8178585" type="application/octet-stream" sparkle:edSignature="qJ2Jng/tBvAm/iS99aCLEFFuJhN869jG/74MeI73nZKQ2CTcIi8YCHok6oJIa7g1T30a4F9/PjL2ZrRB/e9YDg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen2-1.delta" sparkle:deltaFrom="1" length="217746" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uugxdK/an0BxHN0qva0zWQlIqPIqZHgjYjsd49omSCQ9ROUs+7hjKSQ4V800CnOFX02ySev5edzlSf1iR/diAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.4.1</title>
             <pubDate>Sat, 13 Jun 2026 07:19:40 +0100</pubDate>
             <sparkle:version>1</sparkle:version>
