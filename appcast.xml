@@ -3,43 +3,13 @@
     <channel>
         <title>Evergreen</title>
         <item>
-            <title>0.5.2</title>
-            <pubDate>Sun, 14 Jun 2026 09:00:42 +0100</pubDate>
+            <title>0.5.3</title>
+            <pubDate>Thu, 18 Jun 2026 06:48:22 +0100</pubDate>
             <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.5.2</sparkle:shortVersionString>
+            <sparkle:shortVersionString>0.5.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen-0.5.2.zip" length="8185677" type="application/octet-stream" sparkle:edSignature="NTu58g1xHJhgHNmI1As8My2BnP50mcc0QJqWScYKjLrmzhIX+q77vOKkwz/O7i10roJUeSSxsXw7o4sJ3iIVDA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen4-3.delta" sparkle:deltaFrom="3" length="102138" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="IcAaXdJMpX7BC9DIweIyav1DkHKD/LbdpxkrvNFdoBzhb4nhOq3jbsh9J4HP4vYjZJB1jo7DANpomHtsUsdWAA=="/>
-                <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen4-2.delta" sparkle:deltaFrom="2" length="103606" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="u56LhtDlJVQPphfaqez3Sj2Q2FOcueoez3F5UI3Gbr4xgxFa1Q4B8ETadlGot2dHGTQKaGN9i6hwj8DHXGYHAQ=="/>
-                <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen4-1.delta" sparkle:deltaFrom="1" length="224746" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="5Ed33VH3WsuKNPuZ8N4ZBqW+qT1YYl8a8/OqI8G0qOY7LmXZF3xfBtW+oRvGRSmLNOc10iN/bEM5AvyU1bCmCQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.5.1</title>
-            <pubDate>Sun, 14 Jun 2026 08:45:25 +0100</pubDate>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>0.5.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen-0.5.1.zip" length="8178713" type="application/octet-stream" sparkle:edSignature="0GZk8tnGTQnPo9tup+X9fer8iibX5HYiypBj5TcnDXjstwypHTKa6JnjOH1zZfcnuqpVrO/PvVPijIDky5qeCQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen3-2.delta" sparkle:deltaFrom="2" length="33538" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="71UX2qoOaqRYM7PXvcMPf5seI8fVe0hcmXIKDIkdcBnVZ9cDDtWKexc5NjQFNFKc/3paxg0CPMTc3byab2eQAw=="/>
-                <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen3-1.delta" sparkle:deltaFrom="1" length="217374" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Mre7sJw+dZqRL2WdNyYi0dVsGz6+5cnNAyrScA8EDvdEUB0VvTRCWDr2RwRwIi+RIuebcCgpsyqAwg4Wf5KVDg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.5.0</title>
-            <pubDate>Sun, 14 Jun 2026 01:33:58 +0100</pubDate>
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen-0.5.0.zip" length="8178585" type="application/octet-stream" sparkle:edSignature="qJ2Jng/tBvAm/iS99aCLEFFuJhN869jG/74MeI73nZKQ2CTcIi8YCHok6oJIa7g1T30a4F9/PjL2ZrRB/e9YDg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen2-1.delta" sparkle:deltaFrom="1" length="217746" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uugxdK/an0BxHN0qva0zWQlIqPIqZHgjYjsd49omSCQ9ROUs+7hjKSQ4V800CnOFX02ySev5edzlSf1iR/diAw=="/>
-            </sparkle:deltas>
+            <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen-0.5.3.zip" length="8190253" type="application/octet-stream" sparkle:edSignature="wCNBQJVNAfQp1plfQXQimBpIy1ltHrozxdF0WGUDl5O8tFdpxzYFErKGaRE6xAZh4GeleC1++W1YqSRGbt8kCw=="/>
         </item>
     </channel>
 </rss>
