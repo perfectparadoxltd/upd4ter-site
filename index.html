@@ -3,9 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evergreen — Every app on your Mac, kept up to date in one click</title>
-<meta name="description" content="Keep every app on your Mac up to date in one click — checked, fetched and signature-verified. One-time $19.99, on-device, zero telemetry. macOS 14+.">
+<title data-i18n="meta.title">Evergreen — Every app on your Mac, kept up to date in one click</title>
+<meta name="description" data-i18n-attr="content:meta.description" content="Keep every app on your Mac up to date in one click — checked, fetched and signature-verified. One-time $19.99, on-device, zero telemetry. macOS 14+.">
 <link rel="canonical" href="https://evergreen.perfectparadox.co.uk/">
+<link rel="alternate" hreflang="en" href="https://evergreen.perfectparadox.co.uk/?lang=en">
+<link rel="alternate" hreflang="es" href="https://evergreen.perfectparadox.co.uk/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://evergreen.perfectparadox.co.uk/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://evergreen.perfectparadox.co.uk/?lang=de">
+<link rel="alternate" hreflang="it" href="https://evergreen.perfectparadox.co.uk/?lang=it">
+<link rel="alternate" hreflang="pt" href="https://evergreen.perfectparadox.co.uk/?lang=pt">
+<link rel="alternate" hreflang="ja" href="https://evergreen.perfectparadox.co.uk/?lang=ja">
+<link rel="alternate" hreflang="zh-Hans" href="https://evergreen.perfectparadox.co.uk/?lang=zh-Hans">
+<link rel="alternate" hreflang="x-default" href="https://evergreen.perfectparadox.co.uk/">
 <meta property="og:title" content="Evergreen — Every app on your Mac, kept up to date">
 <meta property="og:description" content="App updates in one click, signature-verified before install. One-time $19.99, on-device, zero telemetry.">
 <meta property="og:type" content="website">
@@ -124,6 +133,12 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
 .d-shield{font-size:30px;animation:glow 3s ease-in-out infinite}
 @keyframes glow{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
 .d-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-left:10px}
+/* language picker (i18n) */
+.i18n-picker{display:flex;align-items:center;gap:7px}
+.i18n-picker .i18n-globe{font-size:13px;opacity:.7;line-height:1}
+.i18n-picker select{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:6px;padding:7px 28px 7px 10px;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238c8a86' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;transition:.18s}
+.i18n-picker select:hover{color:var(--ink);border-color:var(--crimson2)}
+.i18n-picker select option{background:#0d0d0e;color:var(--ink);text-transform:none}
 </style>
 <script defer data-domain="evergreen.perfectparadox.co.uk" src="https://analytics.dchv.co.uk/js/script.js"></script>
 </head>
@@ -138,36 +153,36 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
 
 <nav>
   <div class="brand">PERFECT&nbsp;PARADOX</div>
-  <div class="links"><a href="#features">Features</a><a href="#buy">Buy</a><a href="/legal/privacy.html">Privacy</a></div>
+  <div class="links"><a href="#features" data-i18n="nav.features">Features</a><a href="#buy" data-i18n="nav.buy">Buy</a><a href="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a></div>
 </nav>
 
-<div id="stickybuy"><div class="sb-l"><b>Evergreen</b> <span>&mdash; every app up to date, one click</span></div><button class="btn primary" onclick="openCheckout()" style="padding:12px 26px">Buy &middot; $19.99</button></div>
+<div id="stickybuy"><div class="sb-l"><b>Evergreen</b> <span data-i18n="sticky.tagline">&mdash; every app up to date, one click</span></div><button class="btn primary" onclick="openCheckout()" style="padding:12px 26px" data-i18n="sticky.buy">Buy &middot; $19.99</button></div>
 <div class="page">
 <section class="hero">
   <div class="veil"></div>
   <div class="inner">
-    <div class="kicker">App updates · One click · On-device</div>
+    <div class="kicker" data-i18n="hero.kicker">App updates · One click · On-device</div>
     <h1>EVER<span class="stroke">GREEN</span></h1>
-    <p class="sub">Every app on your Mac, kept up to date — checked, fetched and ready in one click. No subscriptions, no telemetry, no nagging.</p>
+    <p class="sub" data-i18n="hero.sub">Every app on your Mac, kept up to date — checked, fetched and ready in one click. No subscriptions, no telemetry, no nagging.</p>
     <div class="cta-row">
-      <a href="https://evergreen.perfectparadox.co.uk/Evergreen.zip" class="btn primary">Download trial →</a>
-      <button class="btn" onclick="openCheckout()">Buy · $19.99</button>
-      <span class="price-tag">ONE-TIME · 14-DAY TRIAL</span>
+      <a href="https://evergreen.perfectparadox.co.uk/Evergreen.zip" class="btn primary" data-i18n="hero.download">Download trial →</a>
+      <button class="btn" onclick="openCheckout()" data-i18n="hero.buy">Buy · $19.99</button>
+      <span class="price-tag" data-i18n="hero.terms">ONE-TIME · 14-DAY TRIAL</span>
     </div>
   </div>
 </section>
 
-<div class="marquee"><div>ONE CLICK UPDATES&nbsp;&nbsp;·&nbsp;&nbsp;<b>ZERO TELEMETRY</b>&nbsp;&nbsp;·&nbsp;&nbsp;CURATED DATABASE&nbsp;&nbsp;·&nbsp;&nbsp;<b>ONE-TIME PURCHASE</b>&nbsp;&nbsp;·&nbsp;&nbsp;ONE CLICK UPDATES&nbsp;&nbsp;·&nbsp;&nbsp;<b>ZERO TELEMETRY</b>&nbsp;&nbsp;·&nbsp;&nbsp;CURATED DATABASE&nbsp;&nbsp;·&nbsp;&nbsp;<b>ONE-TIME PURCHASE</b>&nbsp;&nbsp;·&nbsp;&nbsp;</div></div>
+<div class="marquee"><div data-i18n="marquee.html">ONE CLICK UPDATES&nbsp;&nbsp;·&nbsp;&nbsp;<b>ZERO TELEMETRY</b>&nbsp;&nbsp;·&nbsp;&nbsp;CURATED DATABASE&nbsp;&nbsp;·&nbsp;&nbsp;<b>ONE-TIME PURCHASE</b>&nbsp;&nbsp;·&nbsp;&nbsp;ONE CLICK UPDATES&nbsp;&nbsp;·&nbsp;&nbsp;<b>ZERO TELEMETRY</b>&nbsp;&nbsp;·&nbsp;&nbsp;CURATED DATABASE&nbsp;&nbsp;·&nbsp;&nbsp;<b>ONE-TIME PURCHASE</b>&nbsp;&nbsp;·&nbsp;&nbsp;</div></div>
 
 
-<section class="how"><div style="max-width:1100px;margin:0 auto"><div class="sec-label">// How it works</div></div><div class="how-wrap">
-<div class="step"><div class="sn">1</div><h4>Install &amp;<br>open</h4><p>Drop Evergreen in your Applications folder and launch it. No account, no setup.</p></div>
-<div class="step"><div class="sn">2</div><h4>It scans<br>everything</h4><p>Evergreen reads your installed apps and checks each against the latest released version.</p></div>
-<div class="step"><div class="sn">3</div><h4>One click,<br>all current</h4><p>Review what's outdated and hit Update — or let it run on its own. Done.</p></div>
+<section class="how"><div style="max-width:1100px;margin:0 auto"><div class="sec-label" data-i18n="how.label">// How it works</div></div><div class="how-wrap">
+<div class="step"><div class="sn">1</div><h4 data-i18n="how.1.title">Install &amp;<br>open</h4><p data-i18n="how.1.body">Drop Evergreen in your Applications folder and launch it. No account, no setup.</p></div>
+<div class="step"><div class="sn">2</div><h4 data-i18n="how.2.title">It scans<br>everything</h4><p data-i18n="how.2.body">Evergreen reads your installed apps and checks each against the latest released version.</p></div>
+<div class="step"><div class="sn">3</div><h4 data-i18n="how.3.title">One click,<br>all current</h4><p data-i18n="how.3.body">Review what's outdated and hit Update — or let it run on its own. Done.</p></div>
 </div></section>
 <section class="appshow" style="padding:120px 56px;background:rgba(10,10,11,.82)">
   <div style="max-width:760px;margin:0 auto">
-    <div class="sec-label">// See it work</div>
+    <div class="sec-label" data-i18n="see.label">// See it work</div>
     <div style="background:#1c1c1e;border:0.5px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6);font-family:-apple-system,system-ui,sans-serif">
       <div style="display:flex;align-items:center;gap:8px;padding:11px 14px;background:#2a2a2c;border-bottom:0.5px solid rgba(255,255,255,.08)">
         <span style="width:11px;height:11px;border-radius:50%;background:#ED6A5E"></span>
@@ -176,79 +191,204 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
         <span style="margin-left:8px;font-size:13px;color:#e9e9ea;font-weight:500">Evergreen</span>
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:0.5px solid rgba(255,255,255,.07)">
-        <div><div style="font-size:15px;color:#f4f1ea;font-weight:500">42 apps &middot; <span style="color:#5BE07E">3 updates available</span></div>
-        <div style="font-size:12px;color:#8c8a86;margin-top:2px">Checked just now &middot; Download-only mode</div></div>
-        <span style="background:#34C759;color:#06310f;border-radius:7px;padding:8px 16px;font-size:13px;font-weight:600">Update all</span>
+        <div><div style="font-size:15px;color:#f4f1ea;font-weight:500" data-i18n="see.summary">42 apps &middot; <span style="color:#5BE07E">3 updates available</span></div>
+        <div style="font-size:12px;color:#8c8a86;margin-top:2px" data-i18n="see.checked">Checked just now &middot; Download-only mode</div></div>
+        <span style="background:#34C759;color:#06310f;border-radius:7px;padding:8px 16px;font-size:13px;font-weight:600" data-i18n="see.updateall">Update all</span>
       </div>
       <div>
         <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid rgba(255,255,255,.05)">
           <div style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#F24E1E,#FF7262)"></div>
           <div style="flex:1"><div style="font-size:14px;color:#f4f1ea">Figma</div><div style="font-size:12px;color:#8c8a86">124.5.2 <span style="color:#5BE07E">&rarr; 125.1.0</span></div></div>
-          <span style="color:#5BE07E;border:1px solid rgba(91,224,126,.5);border-radius:6px;padding:5px 14px;font-size:12px">Update</span>
+          <span style="color:#5BE07E;border:1px solid rgba(91,224,126,.5);border-radius:6px;padding:5px 14px;font-size:12px" data-i18n="see.update">Update</span>
         </div>
         <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid rgba(255,255,255,.05)">
           <div style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#4A154B,#ECB22E)"></div>
           <div style="flex:1"><div style="font-size:14px;color:#f4f1ea">Slack</div><div style="font-size:12px;color:#8c8a86">4.38.121 <span style="color:#5BE07E">&rarr; 4.39.90</span></div></div>
-          <span style="color:#5BE07E;border:1px solid rgba(91,224,126,.5);border-radius:6px;padding:5px 14px;font-size:12px">Update</span>
+          <span style="color:#5BE07E;border:1px solid rgba(91,224,126,.5);border-radius:6px;padding:5px 14px;font-size:12px" data-i18n="see.update">Update</span>
         </div>
         <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:0.5px solid rgba(255,255,255,.05)">
           <div style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#0098FF,#0066B8)"></div>
           <div style="flex:1"><div style="font-size:14px;color:#f4f1ea">Visual Studio Code</div><div style="font-size:12px;color:#8c8a86">1.92.0 <span style="color:#5BE07E">&rarr; 1.93.1</span></div></div>
-          <span style="color:#5BE07E;border:1px solid rgba(91,224,126,.5);border-radius:6px;padding:5px 14px;font-size:12px">Update</span>
+          <span style="color:#5BE07E;border:1px solid rgba(91,224,126,.5);border-radius:6px;padding:5px 14px;font-size:12px" data-i18n="see.update">Update</span>
         </div>
         <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;opacity:.55">
           <div style="width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#1DB954,#0a7a36)"></div>
           <div style="flex:1"><div style="font-size:14px;color:#f4f1ea">Spotify</div><div style="font-size:12px;color:#8c8a86">1.2.40</div></div>
-          <span style="font-size:12px;color:#8c8a86">&#10003; Up to date</span>
+          <span style="font-size:12px;color:#8c8a86" data-i18n="see.uptodate">&#10003; Up to date</span>
         </div>
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:#161617;border-top:0.5px solid rgba(255,255,255,.07);font-size:11px;color:#6e6c69">
-        <span>&#10003; Signatures verified before install</span><span>On-device &middot; No telemetry</span>
+        <span data-i18n="see.foot.l">&#10003; Signatures verified before install</span><span data-i18n="see.foot.r">On-device &middot; No telemetry</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="feat" id="features"><div class="feat-inner"><div class="sec-label">// What it does</div><div class="grid">
-<div class="cell"><div class="demo"><div class="d-row"><span class="d-ico" style="background:linear-gradient(135deg,#F24E1E,#FF7262)"></span><span class="d-name">Figma</span><span class="d-bar"><i></i></span><span class="d-chk">&#10003;</span></div></div><div class="n">01</div><div><h3>Every app,<br>one click</h3><p>Scans what's installed and finds the latest version of each &mdash; from a curated database, not guesswork.</p></div></div>
-<div class="cell"><div class="demo"><div class="d-menubar"><span class="d-shield" style="font-size:14px">&#9651;</span><span class="d-badge">3</span></div><div class="d-tag">3 updates available</div></div><div class="n">02</div><div><h3>Lives in your<br>menu bar</h3><p>Checks quietly in the background and tells you only when something's actually out of date.</p></div></div>
-<div class="cell"><div class="demo"><div class="d-row"><span class="d-tag" style="margin:0">Downloading</span><span class="d-bar"><i></i></span></div></div><div class="n">03</div><div><h3>Download-<br>only mode</h3><p>Don't want auto-install? Evergreen just fetches the updates and lets you decide what to run.</p></div></div>
-<div class="cell"><div class="demo"><span class="d-shield">&#128274;</span><span class="d-tag">0 trackers &middot; on-device</span></div><div class="n">04</div><div><h3>On your Mac,<br>not the cloud</h3><p>No account, no telemetry on your apps. One-time purchase, free updates within the major version.</p></div></div>
+<section class="feat" id="features"><div class="feat-inner"><div class="sec-label" data-i18n="feat.label">// What it does</div><div class="grid">
+<div class="cell"><div class="demo"><div class="d-row"><span class="d-ico" style="background:linear-gradient(135deg,#F24E1E,#FF7262)"></span><span class="d-name">Figma</span><span class="d-bar"><i></i></span><span class="d-chk">&#10003;</span></div></div><div class="n">01</div><div><h3 data-i18n="feat.1.title">Every app,<br>one click</h3><p data-i18n="feat.1.body">Scans what's installed and finds the latest version of each &mdash; from a curated database, not guesswork.</p></div></div>
+<div class="cell"><div class="demo"><div class="d-menubar"><span class="d-shield" style="font-size:14px">&#9651;</span><span class="d-badge">3</span></div><div class="d-tag" data-i18n="feat.2.tag">3 updates available</div></div><div class="n">02</div><div><h3 data-i18n="feat.2.title">Lives in your<br>menu bar</h3><p data-i18n="feat.2.body">Checks quietly in the background and tells you only when something's actually out of date.</p></div></div>
+<div class="cell"><div class="demo"><div class="d-row"><span class="d-tag" style="margin:0" data-i18n="feat.3.tag">Downloading</span><span class="d-bar"><i></i></span></div></div><div class="n">03</div><div><h3 data-i18n="feat.3.title">Download-<br>only mode</h3><p data-i18n="feat.3.body">Don't want auto-install? Evergreen just fetches the updates and lets you decide what to run.</p></div></div>
+<div class="cell"><div class="demo"><span class="d-shield">&#128274;</span><span class="d-tag" data-i18n="feat.4.tag">0 trackers &middot; on-device</span></div><div class="n">04</div><div><h3 data-i18n="feat.4.title">On your Mac,<br>not the cloud</h3><p data-i18n="feat.4.body">No account, no telemetry on your apps. One-time purchase, free updates within the major version.</p></div></div>
 </div></div></section>
 
-<section class="cmp"><div class="cmp-wrap"><div class="sec-label">// How it compares</div>
-<table><thead><tr><th></th><th class="us">Evergreen</th><th>Mac App Store</th><th>MacUpdater</th></tr></thead><tbody>
-<tr><td>Updates apps from outside the App Store</td><td class="us yes">&#10003;</td><td><span class="no">&#10007;</span></td><td class="yes">&#10003;</td></tr>
-<tr><td>One-click update all</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
-<tr><td>Verifies code signature before install</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td><span class="no">~</span></td></tr>
-<tr><td>One-time purchase (no subscription)</td><td class="us yes">&#10003;</td><td class="yes">free</td><td><span class="no">subscription</span></td></tr>
-<tr><td>On-device, zero telemetry</td><td class="us yes">&#10003;</td><td><span class="no">~</span></td><td><span class="no">~</span></td></tr>
-<tr><td>Actively maintained in 2026</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td><span class="no">discontinued</span></td></tr>
+<section class="cmp"><div class="cmp-wrap"><div class="sec-label" data-i18n="cmp.label">// How it compares</div>
+<table><thead><tr><th></th><th class="us">Evergreen</th><th data-i18n="cmp.col.appstore">Mac App Store</th><th>MacUpdater</th></tr></thead><tbody>
+<tr><td data-i18n="cmp.row.outside">Updates apps from outside the App Store</td><td class="us yes">&#10003;</td><td><span class="no">&#10007;</span></td><td class="yes">&#10003;</td></tr>
+<tr><td data-i18n="cmp.row.oneclick">One-click update all</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><td data-i18n="cmp.row.signature">Verifies code signature before install</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td><span class="no">~</span></td></tr>
+<tr><td data-i18n="cmp.row.onetime">One-time purchase (no subscription)</td><td class="us yes">&#10003;</td><td class="yes" data-i18n="cmp.val.free">free</td><td><span class="no" data-i18n="cmp.val.subscription">subscription</span></td></tr>
+<tr><td data-i18n="cmp.row.ondevice">On-device, zero telemetry</td><td class="us yes">&#10003;</td><td><span class="no">~</span></td><td><span class="no">~</span></td></tr>
+<tr><td data-i18n="cmp.row.maintained">Actively maintained in 2026</td><td class="us yes">&#10003;</td><td class="yes">&#10003;</td><td><span class="no" data-i18n="cmp.val.discontinued">discontinued</span></td></tr>
 </tbody></table></div></section>
 <section class="price" id="buy">
-  <div class="sec-label" style="text-align:center">// One price. Forever.</div>
+  <div class="sec-label" style="text-align:center" data-i18n="price.label">// One price. Forever.</div>
   <div class="big">EVERGREEN <span class="amt">$19.99</span></div>
-  <div class="terms">One-time purchase · 14-day trial · Works on every Mac you own</div>
-  <button class="btn primary" onclick="openCheckout()">Buy Evergreen →</button>
+  <div class="terms" data-i18n="price.terms">One-time purchase · 14-day trial · Works on every Mac you own</div>
+  <button class="btn primary" onclick="openCheckout()" data-i18n="price.buy">Buy Evergreen →</button>
 </section>
 
-<section class="faq"><div class="faq-wrap"><div class="sec-label">// Questions</div>
-<details class="faq-item"><summary>How does Evergreen find updates?</summary><p>It scans the apps installed on your Mac and matches each one against a curated database of the latest released versions — apps from the web, Homebrew casks and developer update feeds, not just the Mac App Store. No guesswork, no scraping sketchy sites.</p></details>
-<details class="faq-item"><summary>Does it install updates automatically?</summary><p>You're in control. The default is Download-only mode: Evergreen fetches the new version and you click Update when it suits you. Prefer hands-off? Turn on automatic updates per app or for everything.</p></details>
-<details class="faq-item"><summary>What kinds of apps does it cover?</summary><p>The apps the Mac App Store can't update for you — direct downloads, indie tools, developer apps, Homebrew casks. If you installed it from a website, Evergreen most likely tracks it.</p></details>
-<details class="faq-item"><summary>Is it a subscription?</summary><p>No. One-time purchase, yours forever. You get free updates within the same major version (all of 1.x). Major upgrades may be paid, and only if you choose to take them.</p></details>
-<details class="faq-item"><summary>Is it safe? Does it check what it downloads?</summary><p>Yes. Before installing, Evergreen verifies the developer's code signature, so you never run a tampered or fake update. It only downloads from each app's official source.</p></details>
-<details class="faq-item"><summary>How many Macs can I use it on?</summary><p>Up to 2 Macs you own, with a single license. Enter the key on each and you're set.</p></details>
-<details class="faq-item"><summary>What about my privacy?</summary><p>Everything runs on your Mac. No account, no sign-up, and zero telemetry about which apps you have installed. The only network activity is fetching version info and the updates themselves.</p></details>
-<details class="faq-item"><summary>Which macOS do I need?</summary><p>macOS 14 Sonoma or later, on both Apple Silicon and Intel Macs.</p></details>
-<details class="faq-item"><summary>Can I get a refund?</summary><p>Absolutely — a 14-day money-back guarantee, no questions asked. Payments are handled by Paddle; just reply to your receipt and we'll sort it out.</p></details>
+<section class="faq"><div class="faq-wrap"><div class="sec-label" data-i18n="faq.label">// Questions</div>
+<details class="faq-item"><summary data-i18n="faq.1.q">How does Evergreen find updates?</summary><p data-i18n="faq.1.a">It scans the apps installed on your Mac and matches each one against a curated database of the latest released versions — apps from the web, Homebrew casks and developer update feeds, not just the Mac App Store. No guesswork, no scraping sketchy sites.</p></details>
+<details class="faq-item"><summary data-i18n="faq.2.q">Does it install updates automatically?</summary><p data-i18n="faq.2.a">You're in control. The default is Download-only mode: Evergreen fetches the new version and you click Update when it suits you. Prefer hands-off? Turn on automatic updates per app or for everything.</p></details>
+<details class="faq-item"><summary data-i18n="faq.3.q">What kinds of apps does it cover?</summary><p data-i18n="faq.3.a">The apps the Mac App Store can't update for you — direct downloads, indie tools, developer apps, Homebrew casks. If you installed it from a website, Evergreen most likely tracks it.</p></details>
+<details class="faq-item"><summary data-i18n="faq.4.q">Is it a subscription?</summary><p data-i18n="faq.4.a">No. One-time purchase, yours forever. You get free updates within the same major version (all of 1.x). Major upgrades may be paid, and only if you choose to take them.</p></details>
+<details class="faq-item"><summary data-i18n="faq.5.q">Is it safe? Does it check what it downloads?</summary><p data-i18n="faq.5.a">Yes. Before installing, Evergreen verifies the developer's code signature, so you never run a tampered or fake update. It only downloads from each app's official source.</p></details>
+<details class="faq-item"><summary data-i18n="faq.6.q">How many Macs can I use it on?</summary><p data-i18n="faq.6.a">Up to 2 Macs you own, with a single license. Enter the key on each and you're set.</p></details>
+<details class="faq-item"><summary data-i18n="faq.7.q">What about my privacy?</summary><p data-i18n="faq.7.a">Everything runs on your Mac. No account, no sign-up, and zero telemetry about which apps you have installed. The only network activity is fetching version info and the updates themselves.</p></details>
+<details class="faq-item"><summary data-i18n="faq.8.q">Which macOS do I need?</summary><p data-i18n="faq.8.a">macOS 14 Sonoma or later, on both Apple Silicon and Intel Macs.</p></details>
+<details class="faq-item"><summary data-i18n="faq.9.q">Can I get a refund?</summary><p data-i18n="faq.9.a">Absolutely — a 14-day money-back guarantee, no questions asked. Payments are handled by Paddle; just reply to your receipt and we'll sort it out.</p></details>
 </div></section>
-<section class="more" style="padding:100px 0;background:rgba(10,10,11,.95);border-top:1px solid var(--line);overflow:hidden"><div style="max-width:1000px;margin:0 auto 40px;padding:0 56px"><div class="sec-label" style="margin-bottom:0">// More from Perfect Paradox</div></div><style>@keyframes ppmarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}.ppcar:hover .pptrack{animation-play-state:paused}</style><div class="ppcar" style="width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)"><div class="pptrack" style="display:flex;gap:16px;width:max-content;animation:ppmarq 55s linear infinite"><a href="https://curtain.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/curtain.png" alt="Curtain" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Curtain</div><div style="font-size:12px;color:var(--muted);text-align:center">Auto do-not-disturb on share</div></a><a href="https://notebound.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/notebound.png" alt="Notebound" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Notebound</div><div style="font-size:12px;color:var(--muted);text-align:center">Markdown to Apple Notes</div></a><a href="https://everyfile.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/everyfile.png" alt="Everyfile" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Everyfile</div><div style="font-size:12px;color:var(--muted);text-align:center">Instant file search</div></a><a href="https://screenshelf.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/screenshelf.png" alt="Screenshelf" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Screenshelf</div><div style="font-size:12px;color:var(--muted);text-align:center">Search inside screenshots</div></a><a href="https://slimr.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/slimr.png" alt="Slimr" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Slimr</div><div style="font-size:12px;color:var(--muted);text-align:center">Compress, OCR & PDF tools</div></a><a href="https://castly.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/castly.png" alt="Castly" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Castly</div><div style="font-size:12px;color:var(--muted);text-align:center">Transform text as you paste</div></a><a href="https://lightcap.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/lightcap.png" alt="Lightcap" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Lightcap</div><div style="font-size:12px;color:var(--muted);text-align:center">10-second screen GIFs</div></a><a href="https://scrubd.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/scrubd.png" alt="Scrubd" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Scrubd</div><div style="font-size:12px;color:var(--muted);text-align:center">Clean metadata before you share</div></a><a href="https://curtain.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/curtain.png" alt="Curtain" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Curtain</div><div style="font-size:12px;color:var(--muted);text-align:center">Auto do-not-disturb on share</div></a><a href="https://notebound.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/notebound.png" alt="Notebound" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Notebound</div><div style="font-size:12px;color:var(--muted);text-align:center">Markdown to Apple Notes</div></a><a href="https://everyfile.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/everyfile.png" alt="Everyfile" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Everyfile</div><div style="font-size:12px;color:var(--muted);text-align:center">Instant file search</div></a><a href="https://screenshelf.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/screenshelf.png" alt="Screenshelf" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Screenshelf</div><div style="font-size:12px;color:var(--muted);text-align:center">Search inside screenshots</div></a><a href="https://slimr.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/slimr.png" alt="Slimr" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Slimr</div><div style="font-size:12px;color:var(--muted);text-align:center">Compress, OCR & PDF tools</div></a><a href="https://castly.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/castly.png" alt="Castly" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Castly</div><div style="font-size:12px;color:var(--muted);text-align:center">Transform text as you paste</div></a><a href="https://lightcap.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/lightcap.png" alt="Lightcap" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Lightcap</div><div style="font-size:12px;color:var(--muted);text-align:center">10-second screen GIFs</div></a><a href="https://scrubd.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/scrubd.png" alt="Scrubd" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Scrubd</div><div style="font-size:12px;color:var(--muted);text-align:center">Clean metadata before you share</div></a></div></div></section>
+<section class="more" style="padding:100px 0;background:rgba(10,10,11,.95);border-top:1px solid var(--line);overflow:hidden"><div style="max-width:1000px;margin:0 auto 40px;padding:0 56px"><div class="sec-label" style="margin-bottom:0" data-i18n="more.label">// More from Perfect Paradox</div></div><style>@keyframes ppmarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}.ppcar:hover .pptrack{animation-play-state:paused}</style><div class="ppcar" style="width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)"><div class="pptrack" style="display:flex;gap:16px;width:max-content;animation:ppmarq 55s linear infinite"><a href="https://curtain.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/curtain.png" alt="Curtain" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Curtain</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.curtain">Auto do-not-disturb on share</div></a><a href="https://notebound.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/notebound.png" alt="Notebound" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Notebound</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.notebound">Markdown to Apple Notes</div></a><a href="https://everyfile.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/everyfile.png" alt="Everyfile" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Everyfile</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.everyfile">Instant file search</div></a><a href="https://screenshelf.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/screenshelf.png" alt="Screenshelf" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Screenshelf</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.screenshelf">Search inside screenshots</div></a><a href="https://slimr.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/slimr.png" alt="Slimr" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Slimr</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.slimr">Compress, OCR & PDF tools</div></a><a href="https://castly.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/castly.png" alt="Castly" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Castly</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.castly">Transform text as you paste</div></a><a href="https://lightcap.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/lightcap.png" alt="Lightcap" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Lightcap</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.lightcap">10-second screen GIFs</div></a><a href="https://scrubd.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/scrubd.png" alt="Scrubd" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Scrubd</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.scrubd">Clean metadata before you share</div></a><a href="https://curtain.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/curtain.png" alt="Curtain" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Curtain</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.curtain">Auto do-not-disturb on share</div></a><a href="https://notebound.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/notebound.png" alt="Notebound" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Notebound</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.notebound">Markdown to Apple Notes</div></a><a href="https://everyfile.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/everyfile.png" alt="Everyfile" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Everyfile</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.everyfile">Instant file search</div></a><a href="https://screenshelf.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/screenshelf.png" alt="Screenshelf" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Screenshelf</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.screenshelf">Search inside screenshots</div></a><a href="https://slimr.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/slimr.png" alt="Slimr" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Slimr</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.slimr">Compress, OCR & PDF tools</div></a><a href="https://castly.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/castly.png" alt="Castly" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Castly</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.castly">Transform text as you paste</div></a><a href="https://lightcap.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/lightcap.png" alt="Lightcap" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Lightcap</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.lightcap">10-second screen GIFs</div></a><a href="https://scrubd.perfectparadox.co.uk" style="flex:0 0 210px;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;padding:28px 16px;border:1px solid var(--line);transition:.18s" onmouseover="this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.background='transparent'"><img src="icons/scrubd.png" alt="Scrubd" width="72" height="72" style="border-radius:16px"><div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink)">Scrubd</div><div style="font-size:12px;color:var(--muted);text-align:center" data-i18n="more.scrubd">Clean metadata before you share</div></a></div></div></section>
 <footer>
-  <div>© 2026 Perfect Paradox Ltd · NI739317</div>
-  <div><a href="/legal/privacy.html">Privacy</a> · <a href="/legal/terms.html">Terms</a> · <a href="/legal/refund.html">Refund</a> · <a href="/legal/eula.html">EULA</a> · <a href="mailto:info@perfectparadox.co.uk">info@perfectparadox.co.uk</a></div>
+  <div data-i18n="footer.copy">© 2026 Perfect Paradox Ltd · NI739317</div>
+  <div><a href="/legal/privacy.html" data-i18n="footer.privacy">Privacy</a> · <a href="/legal/terms.html" data-i18n="footer.terms">Terms</a> · <a href="/legal/refund.html" data-i18n="footer.refund">Refund</a> · <a href="/legal/eula.html" data-i18n="footer.eula">EULA</a> · <a href="mailto:info@perfectparadox.co.uk">info@perfectparadox.co.uk</a></div>
+  <div class="i18n-picker">
+    <label for="langSelect" class="i18n-globe" aria-hidden="true">&#127760;</label>
+    <select id="langSelect" aria-label="Language / Idioma"></select>
+  </div>
 </footer>
 </div>
+
+<!-- i18n: motor multiidioma client-side (NO toca Paddle ni precios). Patrón reutilizable (= castly-site). -->
+<script src="translations.js"></script>
+<script>
+(function () {
+  var I18N = window.I18N || {};
+  var LANGS = I18N.__langs || { en: "English" };
+  var SUPPORTED = Object.keys(LANGS);
+  var DEFAULT = "en";
+  var STORE_KEY = "evergreen_lang";
+
+  function normalize(code) {
+    if (!code) return null;
+    code = code.trim();
+    if (SUPPORTED.indexOf(code) !== -1) return code;          // match exacto (incl. zh-Hans)
+    var lower = code.toLowerCase();
+    // chino → zh-Hans (simplificado) por defecto
+    if (lower.indexOf("zh") === 0) return SUPPORTED.indexOf("zh-Hans") !== -1 ? "zh-Hans" : null;
+    var base = lower.split("-")[0];                            // "es-419" → "es"
+    for (var i = 0; i < SUPPORTED.length; i++) {
+      if (SUPPORTED[i].toLowerCase() === base || SUPPORTED[i].toLowerCase().split("-")[0] === base) {
+        return SUPPORTED[i];
+      }
+    }
+    return null;
+  }
+
+  function detect() {
+    try {
+      var qs = new URLSearchParams(window.location.search).get("lang");
+      var fromUrl = normalize(qs);
+      if (fromUrl) return fromUrl;
+    } catch (e) {}
+    try {
+      var saved = normalize(localStorage.getItem(STORE_KEY));
+      if (saved) return saved;
+    } catch (e) {}
+    var navs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    for (var i = 0; i < navs.length; i++) {
+      var n = normalize(navs[i]);
+      if (n) return n;
+    }
+    return DEFAULT;
+  }
+
+  function apply(lang) {
+    var dict = I18N[lang] || I18N[DEFAULT] || {};
+    var fallback = I18N[DEFAULT] || {};
+    function val(key) { return (dict[key] != null) ? dict[key] : fallback[key]; }
+
+    // 1) contenido de texto (permite HTML inline: <br>, <code>, <span>, →, etc.)
+    var nodes = document.querySelectorAll("[data-i18n]");
+    for (var i = 0; i < nodes.length; i++) {
+      var k = nodes[i].getAttribute("data-i18n");
+      var v = val(k);
+      if (v != null) nodes[i].innerHTML = v;
+    }
+    // 2) atributos (content/placeholder/aria-...) → data-i18n-attr="attr:clave[,attr2:clave2]"
+    var attrNodes = document.querySelectorAll("[data-i18n-attr]");
+    for (var j = 0; j < attrNodes.length; j++) {
+      var spec = attrNodes[j].getAttribute("data-i18n-attr");
+      var pairs = spec.split(",");
+      for (var p = 0; p < pairs.length; p++) {
+        var parts = pairs[p].split(":");
+        if (parts.length === 2) {
+          var av = val(parts[1].trim());
+          if (av != null) attrNodes[j].setAttribute(parts[0].trim(), av.replace(/&amp;/g, "&"));
+        }
+      }
+    }
+    // 3) <html lang>
+    document.documentElement.setAttribute("lang", lang);
+  }
+
+  function persist(lang) {
+    try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
+  }
+
+  function syncUrl(lang) {
+    try {
+      var url = new URL(window.location.href);
+      url.searchParams.set("lang", lang);
+      history.replaceState(null, "", url.toString());
+    } catch (e) {}
+  }
+
+  function buildSelector(current) {
+    var sel = document.getElementById("langSelect");
+    if (!sel) return;
+    sel.innerHTML = "";
+    for (var i = 0; i < SUPPORTED.length; i++) {
+      var code = SUPPORTED[i];
+      var opt = document.createElement("option");
+      opt.value = code;
+      opt.textContent = LANGS[code];
+      if (code === current) opt.selected = true;
+      sel.appendChild(opt);
+    }
+    sel.addEventListener("change", function () {
+      var lang = sel.value;
+      apply(lang);
+      persist(lang);
+      syncUrl(lang);
+    });
+  }
+
+  function init() {
+    var lang = detect();
+    apply(lang);
+    persist(lang);
+    syncUrl(lang);
+    buildSelector(lang);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
 
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 <script>
