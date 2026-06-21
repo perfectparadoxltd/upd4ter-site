@@ -3,13 +3,13 @@
     <channel>
         <title>Evergreen</title>
         <item>
-            <title>0.5.3</title>
-            <pubDate>Thu, 18 Jun 2026 06:48:22 +0100</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.5.3</sparkle:shortVersionString>
+            <title>0.5.4</title>
+            <pubDate>Sun, 21 Jun 2026 23:48:41 +0100</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>0.5.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen-0.5.3.zip" length="8190253" type="application/octet-stream" sparkle:edSignature="wCNBQJVNAfQp1plfQXQimBpIy1ltHrozxdF0WGUDl5O8tFdpxzYFErKGaRE6xAZh4GeleC1++W1YqSRGbt8kCw=="/>
+            <enclosure url="https://evergreen.perfectparadox.co.uk/Evergreen-0.5.4.zip" length="8226488" type="application/octet-stream" sparkle:edSignature="WSIhIvZ5BtFcl4zvAE9xZjVxiIILhycmN6A6C/lkGlm2H5r9zYnUMEImXItKR7Gu5AakKvQ0G3s5AOYon+RBAw=="/>
         </item>
     </channel>
 </rss>
