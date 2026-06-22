@@ -168,6 +168,23 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
 .fb-msg.ok{color:var(--crimson2);display:block}
 .fb-msg.err{color:#ED6A5E;display:block}
 .fb .btn[disabled]{opacity:.55;cursor:wait}
+/* changelog / novedades */
+.news{padding:120px 56px;background:rgba(10,10,11,.82)}
+.news-wrap{max-width:820px;margin:0 auto}
+.rel{position:relative;margin-top:8px;padding-left:34px;border-left:1px solid var(--line)}
+.rel-item{position:relative;padding-bottom:44px}
+.rel-item:last-child{padding-bottom:0}
+.rel-item::before{content:'';position:absolute;left:-39px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--muted);box-shadow:0 0 0 5px var(--bg)}
+.rel-item.latest::before{background:var(--crimson2);box-shadow:0 0 0 5px var(--bg)}
+.rel-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.rel-v{font-family:'Anton',sans-serif;font-size:32px;line-height:1;color:var(--ink)}
+.rel-item.latest .rel-v{color:var(--crimson2)}
+.rel-date{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rel-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--bg);background:var(--crimson2);border-radius:9px;padding:3px 9px}
+.rel-list{list-style:none;display:flex;flex-direction:column;gap:9px}
+.rel-list li{position:relative;padding-left:20px;color:#cbc7bf;font-size:15.5px;line-height:1.55}
+.rel-list li::before{content:'';position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--crimson2)}
+@media(max-width:760px){.news{padding-left:24px;padding-right:24px}}
 @media(max-width:760px){.fb,.langs{padding-left:24px;padding-right:24px}}
 </style>
 <script defer data-domain="evergreen.perfectparadox.co.uk" src="https://analytics.dchv.co.uk/js/script.js"></script>
@@ -294,6 +311,37 @@ details.faq-item p{padding:0 0 26px;margin:0;color:#cbc7bf;font-size:16px;line-h
 <details class="faq-item"><summary data-i18n="faq.8.q">Which macOS do I need?</summary><p data-i18n="faq.8.a">macOS 14 Sonoma or later, on both Apple Silicon and Intel Macs.</p></details>
 <details class="faq-item"><summary data-i18n="faq.9.q">Can I get a refund?</summary><p data-i18n="faq.9.a">Absolutely — a 14-day money-back guarantee, no questions asked. Payments are handled by Paddle; just reply to your receipt and we'll sort it out.</p></details>
 </div></section>
+<section class="news" id="changelog"><div class="news-wrap"><div class="sec-label" data-i18n="news.label">// What's new</div>
+<div class="rel">
+  <div class="rel-item latest">
+    <div class="rel-head"><span class="rel-v">0.5.4</span><span class="rel-date">Jun 2026</span><span class="rel-tag" data-i18n="news.latest">Latest</span></div>
+    <ul class="rel-list"><li data-i18n="news.054.1">Evergreen now speaks your language — the whole interface is localized into 8 languages and follows your Mac automatically.</li></ul>
+  </div>
+  <div class="rel-item">
+    <div class="rel-head"><span class="rel-v">0.5.3</span><span class="rel-date">Jun 2026</span></div>
+    <ul class="rel-list"><li data-i18n="news.053.1">Smarter version detection: no more apps wrongly flagged as outdated, offered a downgrade, or briefly shown as &ldquo;up to date&rdquo; during a refresh.</li></ul>
+  </div>
+  <div class="rel-item">
+    <div class="rel-head"><span class="rel-v">0.5.2</span><span class="rel-date">Jun 2026</span></div>
+    <ul class="rel-list"><li data-i18n="news.052.1">Universal fail-safe: apps that can&rsquo;t be updated automatically now fall back to a clear manual-update step instead of breaking the install.</li></ul>
+  </div>
+  <div class="rel-item">
+    <div class="rel-head"><span class="rel-v">0.5.1</span><span class="rel-date">Jun 2026</span></div>
+    <ul class="rel-list"><li data-i18n="news.051.1">Fixed a case where a stable app could be offered a development build instead of the proper release (seen with VLC).</li></ul>
+  </div>
+  <div class="rel-item">
+    <div class="rel-head"><span class="rel-v">0.5.0</span><span class="rel-date">Jun 2026</span></div>
+    <ul class="rel-list"><li data-i18n="news.050.1">Major security hardening of the update engine: verified downloads, real signature checks and atomic install with rollback if anything goes wrong.</li><li data-i18n="news.050.2">Each app now shows its publish date and a local history of the updates Evergreen has applied.</li></ul>
+  </div>
+  <div class="rel-item">
+    <div class="rel-head"><span class="rel-v">0.4.0</span><span class="rel-date">Jun 2026</span></div>
+    <ul class="rel-list"><li data-i18n="news.040.1">One-click update engine with a two-pane layout, app icons and release notes, plus licensing and a 14-day trial.</li></ul>
+  </div>
+  <div class="rel-item">
+    <div class="rel-head"><span class="rel-v">0.1.0</span><span class="rel-date">Jun 2026</span></div>
+    <ul class="rel-list"><li data-i18n="news.010.1">Initial release.</li></ul>
+  </div>
+</div></div></section>
 <section class="fb" id="feedback"><div class="fb-wrap"><div class="sec-label" data-i18n="fb.label">// Feedback</div>
   <h2 style="font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(34px,6vw,58px);line-height:.9;margin:0 0 18px" data-i18n="fb.title">Help shape<br>Evergreen</h2>
   <p class="fb-lead" data-i18n="fb.lead">Found a bug, or wish it did one more thing? Tell us — every message goes straight to the people who build Evergreen. No account, no tracking.</p>

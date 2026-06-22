@@ -25,6 +25,17 @@ window.I18N = {
 
   /* ===================================================================== EN */
   en: {
+    /* novedades / changelog */
+    "news.label": "// What's new",
+    "news.latest": "Latest",
+    "news.054.1": "Evergreen now speaks your language — the whole interface is localized into 8 languages and follows your Mac automatically.",
+    "news.053.1": "Smarter version detection: no more apps wrongly flagged as outdated, offered a downgrade, or briefly shown as “up to date” during a refresh.",
+    "news.052.1": "Universal fail-safe: apps that can’t be updated automatically now fall back to a clear manual-update step instead of breaking the install.",
+    "news.051.1": "Fixed a case where a stable app could be offered a development build instead of the proper release (seen with VLC).",
+    "news.050.1": "Major security hardening of the update engine: verified downloads, real signature checks and atomic install with rollback if anything goes wrong.",
+    "news.050.2": "Each app now shows its publish date and a local history of the updates Evergreen has applied.",
+    "news.040.1": "One-click update engine with a two-pane layout, app icons and release notes, plus licensing and a 14-day trial.",
+    "news.010.1": "Initial release.",
     /* idiomas + feedback (v0.1.11) */
     "hero.langs": "8 languages",
     "marquee.5": "8 LANGUAGES",
@@ -152,6 +163,17 @@ window.I18N = {
 
   /* ===================================================================== ES */
   es: {
+    /* novedades / changelog */
+    "news.label": "// Novedades",
+    "news.latest": "Última",
+    "news.054.1": "Evergreen ya habla tu idioma: toda la interfaz está localizada en 8 idiomas y sigue automáticamente la configuración de tu Mac.",
+    "news.053.1": "Detección de versiones más inteligente: se acabaron las apps marcadas por error como desactualizadas, las propuestas de bajar de versión o el «está actualizada» que aparecía un instante al refrescar.",
+    "news.052.1": "A prueba de fallos universal: las apps que no pueden actualizarse automáticamente pasan a un paso claro de actualización manual en lugar de romper la instalación.",
+    "news.051.1": "Corregido un caso en el que una app estable podía recibir una versión de desarrollo en vez de la versión correcta (visto con VLC).",
+    "news.050.1": "Gran refuerzo de seguridad del motor de actualizaciones: descargas verificadas, comprobación real de firmas e instalación atómica con reversión si algo sale mal.",
+    "news.050.2": "Cada app muestra ahora su fecha de publicación y un historial local de las actualizaciones que ha aplicado Evergreen.",
+    "news.040.1": "Motor de actualización con un solo clic, con diseño de dos paneles, iconos de apps y notas de versión, además de licencias y prueba de 14 días.",
+    "news.010.1": "Versión inicial.",
     /* idiomas + feedback (v0.1.11) */
     "hero.langs": "8 idiomas",
     "marquee.5": "8 IDIOMAS",
@@ -279,6 +301,17 @@ window.I18N = {
 
   /* ===================================================================== FR */
   fr: {
+    /* novedades / changelog */
+    "news.label": "// Nouveautés",
+    "news.latest": "Récent",
+    "news.054.1": "Evergreen parle désormais votre langue : toute l'interface est traduite en 8 langues et suit automatiquement votre Mac.",
+    "news.053.1": "Détection de version plus fine : fini les apps signalées à tort comme obsolètes, les propositions de rétrogradation ou le « à jour » affiché un instant pendant l'actualisation.",
+    "news.052.1": "Sécurité universelle : les apps qui ne peuvent pas être mises à jour automatiquement basculent vers une étape de mise à jour manuelle claire au lieu de casser l'installation.",
+    "news.051.1": "Correction d'un cas où une app stable pouvait se voir proposer une version de développement au lieu de la bonne version (constaté avec VLC).",
+    "news.050.1": "Renforcement majeur de la sécurité du moteur de mise à jour : téléchargements vérifiés, vraies vérifications de signature et installation atomique avec retour arrière en cas de problème.",
+    "news.050.2": "Chaque app affiche désormais sa date de publication et un historique local des mises à jour appliquées par Evergreen.",
+    "news.040.1": "Moteur de mise à jour en un clic avec disposition en deux volets, icônes d'apps et notes de version, plus licences et essai de 14 jours.",
+    "news.010.1": "Version initiale.",
     /* idiomas + feedback (v0.1.11) */
     "hero.langs": "8 langues",
     "marquee.5": "8 LANGUES",
@@ -406,6 +439,17 @@ window.I18N = {
 
   /* ===================================================================== DE */
   de: {
+    /* novedades / changelog */
+    "news.label": "// Neuigkeiten",
+    "news.latest": "Neu",
+    "news.054.1": "Evergreen spricht jetzt deine Sprache: Die gesamte Oberfläche ist in 8 Sprachen übersetzt und richtet sich automatisch nach deinem Mac.",
+    "news.053.1": "Klügere Versionserkennung: Keine Apps mehr, die fälschlich als veraltet markiert, zum Downgrade angeboten oder beim Aktualisieren kurz als „aktuell“ angezeigt werden.",
+    "news.052.1": "Universelle Ausfallsicherheit: Apps, die sich nicht automatisch aktualisieren lassen, wechseln zu einem klaren manuellen Update-Schritt, statt die Installation zu zerstören.",
+    "news.051.1": "Ein Fall behoben, in dem einer stabilen App eine Entwicklungsversion statt der richtigen Version angeboten werden konnte (bei VLC beobachtet).",
+    "news.050.1": "Umfassende Sicherheitshärtung der Update-Engine: verifizierte Downloads, echte Signaturprüfungen und atomare Installation mit Rollback, falls etwas schiefgeht.",
+    "news.050.2": "Jede App zeigt jetzt ihr Veröffentlichungsdatum und einen lokalen Verlauf der von Evergreen durchgeführten Updates.",
+    "news.040.1": "Ein-Klick-Update-Engine mit Zwei-Spalten-Layout, App-Symbolen und Versionshinweisen, dazu Lizenzierung und 14-tägige Testphase.",
+    "news.010.1": "Erste Version.",
     /* idiomas + feedback (v0.1.11) */
     "hero.langs": "8 Sprachen",
     "marquee.5": "8 SPRACHEN",
@@ -533,6 +577,17 @@ window.I18N = {
 
   /* ===================================================================== IT */
   it: {
+    /* novedades / changelog */
+    "news.label": "// Novità",
+    "news.latest": "Ultima",
+    "news.054.1": "Evergreen ora parla la tua lingua: tutta l'interfaccia è localizzata in 8 lingue e segue automaticamente il tuo Mac.",
+    "news.053.1": "Rilevamento delle versioni più intelligente: niente più app segnalate per errore come obsolete, proposte di downgrade o quel «aggiornata» mostrato per un attimo durante l'aggiornamento.",
+    "news.052.1": "Sicurezza universale: le app che non possono aggiornarsi automaticamente passano a un chiaro passaggio di aggiornamento manuale invece di rompere l'installazione.",
+    "news.051.1": "Corretto un caso in cui a un'app stabile poteva essere proposta una versione di sviluppo invece di quella corretta (riscontrato con VLC).",
+    "news.050.1": "Importante rafforzamento della sicurezza del motore di aggiornamento: download verificati, controlli reali delle firme e installazione atomica con ripristino in caso di problemi.",
+    "news.050.2": "Ogni app ora mostra la sua data di pubblicazione e una cronologia locale degli aggiornamenti applicati da Evergreen.",
+    "news.040.1": "Motore di aggiornamento con un clic, layout a due riquadri, icone delle app e note di versione, oltre a licenze e prova di 14 giorni.",
+    "news.010.1": "Versione iniziale.",
     /* idiomas + feedback (v0.1.11) */
     "hero.langs": "8 lingue",
     "marquee.5": "8 LINGUE",
@@ -660,6 +715,17 @@ window.I18N = {
 
   /* ===================================================================== PT */
   pt: {
+    /* novedades / changelog */
+    "news.label": "// Novidades",
+    "news.latest": "Recente",
+    "news.054.1": "O Evergreen agora fala a sua língua: toda a interface está localizada em 8 idiomas e segue automaticamente o seu Mac.",
+    "news.053.1": "Deteção de versões mais inteligente: deixaram de aparecer apps marcadas por engano como desatualizadas, propostas de regressão ou aquele «atualizada» mostrado por instantes durante a atualização.",
+    "news.052.1": "À prova de falhas universal: as apps que não podem ser atualizadas automaticamente passam a um passo claro de atualização manual em vez de quebrar a instalação.",
+    "news.051.1": "Corrigido um caso em que uma app estável podia receber uma versão de desenvolvimento em vez da versão correta (observado com o VLC).",
+    "news.050.1": "Grande reforço de segurança do motor de atualizações: transferências verificadas, verificações reais de assinatura e instalação atómica com reversão se algo correr mal.",
+    "news.050.2": "Cada app mostra agora a sua data de publicação e um histórico local das atualizações aplicadas pelo Evergreen.",
+    "news.040.1": "Motor de atualização com um clique, com disposição de dois painéis, ícones de apps e notas de versão, além de licenciamento e período de avaliação de 14 dias.",
+    "news.010.1": "Versão inicial.",
     /* idiomas + feedback (v0.1.11) */
     "hero.langs": "8 idiomas",
     "marquee.5": "8 IDIOMAS",
@@ -787,6 +853,17 @@ window.I18N = {
 
   /* ===================================================================== JA */
   ja: {
+    /* novedades / changelog */
+    "news.label": "// 新着情報",
+    "news.latest": "最新",
+    "news.054.1": "Evergreen があなたの言語に対応。インターフェース全体が 8 言語にローカライズされ、Mac の設定に自動で合わせます。",
+    "news.053.1": "バージョン検出がより賢く：誤って「更新が必要」と表示されたり、ダウングレードを提案されたり、更新中に一瞬「最新」と表示されたりすることがなくなりました。",
+    "news.052.1": "万全のフェイルセーフ：自動更新できないアプリは、インストールを壊すことなく、わかりやすい手動更新の手順へ切り替わります。",
+    "news.051.1": "安定版のアプリに、正しいリリース版ではなく開発版が提示されることがあった問題を修正しました（VLC で確認）。",
+    "news.050.1": "更新エンジンのセキュリティを大幅に強化：検証済みダウンロード、本物の署名チェック、問題発生時にロールバックする原子的インストール。",
+    "news.050.2": "各アプリに公開日と、Evergreen が適用した更新のローカル履歴が表示されるようになりました。",
+    "news.040.1": "ワンクリック更新エンジン。2 ペインのレイアウト、アプリアイコン、リリースノートに加え、ライセンスと 14 日間の試用に対応。",
+    "news.010.1": "初回リリース。",
     /* idiomas + feedback (v0.1.11) */
     "hero.langs": "8言語",
     "marquee.5": "8言語対応",
@@ -914,6 +991,17 @@ window.I18N = {
 
   /* ===================================================================== ZH-HANS */
   "zh-Hans": {
+    /* novedades / changelog */
+    "news.label": "// 新功能",
+    "news.latest": "最新",
+    "news.054.1": "Evergreen 现在会说你的语言——整个界面已本地化为 8 种语言，并自动跟随你的 Mac 设置。",
+    "news.053.1": "更智能的版本检测：不再把应用误标为过期、提示降级，或在刷新时短暂显示“已是最新”。",
+    "news.052.1": "通用故障保护：无法自动更新的应用会改为清晰的手动更新步骤，而不会破坏安装。",
+    "news.051.1": "修复了稳定版应用可能被提供开发版本而非正确发行版的问题（在 VLC 上出现）。",
+    "news.050.1": "全面强化更新引擎的安全性：经过校验的下载、真实的签名检查，以及出错时可回滚的原子化安装。",
+    "news.050.2": "每个应用现在都会显示其发布日期，以及 Evergreen 已应用更新的本地历史记录。",
+    "news.040.1": "一键更新引擎，采用双栏布局、应用图标和发行说明，并加入授权与 14 天试用。",
+    "news.010.1": "首个版本。",
     /* idiomas + feedback (v0.1.11) */
     "hero.langs": "8 种语言",
     "marquee.5": "8 种语言",
